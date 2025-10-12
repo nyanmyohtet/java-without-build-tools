@@ -2,7 +2,7 @@
 
 # Script to compile and run a Java program
 
-# Clear `bin` dir
+# Clear output dirs
 ./clean.sh
 
 cd src/
