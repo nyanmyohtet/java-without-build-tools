@@ -1,13 +1,18 @@
 #!/bin/bash
 
-# Script to compile and run a Java program
+# Script to compile and test Java classes
+
+# Clear `bin` dir
+./clean.sh
+
+ls bin/
 
 cd src/
 
 pwd
 
 # Compile the Java source file
-javac -classpath .:../lib/junit-4.13.2.jar com/javaproject/CalculatorTest.java
+javac -d ../bin -cp .:../libs/* com/javaproject/CalculatorTest.java
 
 if [ $? -ne 0 ]; then
   echo "Compilation failed."
@@ -16,5 +21,8 @@ fi
 
 echo "Compilation success."
 
-java -classpath .:../lib/junit-4.13.2.jar:../lib/hamcrest-3.0.jar org.junit.runner.JUnitCore com.javaproject.CalculatorTest
+cd ../bin
 
+pwd
+
+java -cp .:../libs/* org.junit.runner.JUnitCore com.javaproject.CalculatorTest
