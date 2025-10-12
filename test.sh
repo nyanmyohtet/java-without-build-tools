@@ -12,7 +12,7 @@ cd src/
 pwd
 
 # Compile the Java source file
-javac -d ../bin -cp .:../libs/* com/javaproject/CalculatorTest.java
+javac -d ../bin -cp .:../libs/* com/javaproject/Main.java com/javaproject/CalculatorTest.java
 
 if [ $? -ne 0 ]; then
   echo "Compilation failed."
