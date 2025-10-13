@@ -2,26 +2,31 @@
 
 # Script to compile and run a Java program
 
+if [ -z "$1" ]; then
+  echo "[ERROR] Usage: $0 run"
+  exit 1
+fi
+
 # Clear output dirs
 ./clean.sh
 
 cd src/
-
-pwd
+echo "[INFO] Changed to src dir before compile"
 
 # Compile the Java source file
 # `-d bin` option directs compiled `.class` files into a `bin` directory.
 javac -d ../bin com/javaproject/Main.java
 
 if [ $? -ne 0 ]; then
-  echo "Compilation failed."
+  echo "[ERROR] Compilation failed."
   exit 1
 fi
 
-echo "Compilation success."
+echo "[INFO] Compilation success."
 
 cd ../bin
+echo "[INFO] Changed to bin dir to run compiled class(s)"
 
-pwd
+echo "[INFO] ### Start run ###"
 
 java com.javaproject/Main
