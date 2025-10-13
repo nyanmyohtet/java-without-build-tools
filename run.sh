@@ -24,9 +24,9 @@ fi
 
 echo "[INFO] Compilation success."
 
-cd ../bin
+cd ..
 echo "[INFO] Changed to bin dir to run compiled class(s)"
 
 echo "[INFO] ### Start run ###"
 
-java com.javaproject/Main
+java -cp "bin" com.javaproject/Main
