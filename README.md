@@ -1,5 +1,16 @@
 # Java Project without Build Tools
 
+## Files and Folders
+
+```sh
+JavaProject/
+│
+├── src/            # Contains Java source files
+│   └── Main.java
+│
+└── libs/           # contain external JAR libraries
+```
+
 ## Compile and Run
 
 ```sh
