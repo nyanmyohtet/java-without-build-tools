@@ -37,4 +37,4 @@ cd ..
 
 pwd
 
-java -cp "libs/test/*" org.jacoco.cli.internal.Main report bin/jacoco.exec --classfiles bin/ --sourcefiles src/ --html report
+java -cp "libs/test/*" org.jacoco.cli.internal.Main report bin/jacoco.exec --classfiles bin/ --sourcefiles src/ --html report --xml report/jacoco.xml
